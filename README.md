@@ -20,7 +20,7 @@ Each dimension returns a pass/fail verdict with field-level reasoning, so ML eng
 
 ## Why this exists
 
-Mili claims to be the most accurate AI note-taker for wealth advisors. Accuracy without measurement is just a claim.
+Mili is ranked the most accurate AI note-taker for wealth advisors. Maintaining that standard at scale requires systematic measurement.
 
 This eval framework makes quality visible and actionable across three real use cases:
 
