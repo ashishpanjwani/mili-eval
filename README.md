@@ -88,5 +88,3 @@ requirements.txt
 Each sample has a **complete note** and a **degraded note** — toggle between them to see scores change visibly across all three tabs.
 
 ---
-
-*Built as a PM pitch prototype demonstrating eval ownership for AI-driven financial advisory products.*
