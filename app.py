@@ -11,7 +11,7 @@ st.set_page_config(page_title="Mili Note Evaluator", page_icon="🏦", layout="w
 
 st.title("Mili — Meeting Note Eval Tool")
 st.caption(
-    "Internal prototype · LLM-as-judge framework for evaluating AI-generated meeting notes "
+    "Internal prototype · Automated evaluation of AI-generated meeting notes "
     "across quality, compliance (Reg BI / FINRA), and sync readiness."
 )
 st.divider()
@@ -30,9 +30,9 @@ with st.sidebar:
     st.markdown("**How this works**")
     st.markdown(
         "1. Select a meeting type and note version\n"
-        "2. Click **Run Eval** to score with Claude\n"
+        "2. Click **Run Eval** to score the note\n"
         "3. Scores update across all three tabs\n\n"
-        "_In production, Mili runs this eval on every generated note before CRM sync._"
+        "_In production, Mili would run this eval on every generated note before CRM sync._"
     )
     run = st.button("Run Eval", type="primary", use_container_width=True)
 
@@ -58,7 +58,7 @@ def risk_badge(level: str) -> str:
 
 # ── Results ───────────────────────────────────────────────────────────────────
 if run:
-    with st.spinner("Scoring with Claude (LLM-as-judge)…"):
+    with st.spinner("Evaluating note…"):
         q = evaluate_quality(meeting_type, context, note)
         c = evaluate_compliance(meeting_type, context, note)
         r = evaluate_review_decision(meeting_type, context, note)
